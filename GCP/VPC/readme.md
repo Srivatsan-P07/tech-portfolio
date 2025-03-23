@@ -1,0 +1,16 @@
+| Module                                        | Topics Covered                                                                                                                                                                     |
+| --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Introduction to Google Cloud VPC           | What is a VPC? Importance of VPC in cloud networking.<br />Key components of a VPC. <br />Differences between on-prem and cloud networking.                                        |
+| 2. VPC Fundamentals                           | Subnets and CIDR ranges.<br />Regional vs. global nature of VPC. <br />VPC Peering and Shared VPC. <br />Default VPC vs Custom VPC.                                                |
+| 3. Configuring VPC in Google Cloud            | Creating a custom VPC.<br />Defining IP address ranges and subnets. <br />Understanding private and public subnets.                                                                |
+| 4. Firewalls & Security in VPC                | Configuring firewall rules (allow/deny).<br />Priority and implicit rules. <br />Using network tags and service accounts for firewall policies.                                    |
+| 5. Routes and Traffic Management              | Understanding route tables in GCP.<br />Default vs custom routes. Managing traffic between subnets.                                                                                |
+| 6. VPC Peering and Hybrid Connectivity        | Setting up VPC Peering.<br />Using VPN and Interconnect for hybrid cloud setups. <br />Private Google Access.                                                                      |
+| 7. Cloud NAT & External Connectivity          | Enabling Cloud NAT for outbound internet access.<br />Configuring NAT gateways and Cloud Router. <br />Ensuring secure connectivity.                                               |
+| 8. Load Balancing & Network Services          | Introduction to GCP Load Balancers (HTTP(S), TCP/UDP, Internal, External).<br />Understanding global and regional load balancing. DNS, CDN, and Cloud Armor for enhanced security. |
+| 9. Private Google Access & Service Networking | Configuring private access to Google APIs.<br />Setting up VPC Service Controls for data security.                                                                                 |
+| 10. Monitoring & Troubleshooting VPC          | Using Network Intelligence Center.<br />Monitoring traffic flows with VPC Flow Logs.<br /> Debugging network issues.                                                               |
+| 11. Best Practices & Cost Optimization        | Optimizing VPC costs.<br />Network segmentation strategies. <br />Implementing least privilege security model.                                                                     |
+| 12. Hands-on Project                          | Building a secure multi-region VPC architecture.<br />Implementing hybrid cloud networking with VPN & Interconnect.                                                                |
+
+.

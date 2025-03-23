@@ -1,0 +1,15 @@
+| Module                                        | Topics Covered                                                                                                                                                                       |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1. Introduction to Apache Kafka               | What is Kafka? Why use Kafka? Kafka use cases.<br />Core Kafka components: Producers, Consumers, Brokers, Topics, Partitions, and ZooKeeper. <br />Kafka vs other messaging systems. |
+| 2. Setting Up Kafka                           | Installing Kafka on local machine.<br />Configuring Kafka and ZooKeeper. Starting Kafka and creating topics. <br />Using Kafka command-line tools.                                   |
+| 3. Kafka with Python (Producer & Consumer)    | Installing Kafka-Python library.<br />Writing a Kafka producer in Python. <br />Writing a Kafka consumer in Python. Sending and receiving messages.                                  |
+| 4. Kafka Producer Deep Dive                   | Producer acknowledgments and retries.<br />Configuring batch size, compression, and key-based partitioning. <br />Handling producer failures.                                        |
+| 5. Kafka Consumer Deep Dive                   | Consumer groups and partition rebalancing.<br />Auto-offset commits and manual offset management. <br />Polling vs. subscribe methods. <br />Handling duplicate messages.            |
+| 6. Kafka Streams & Data Processing            | Introduction to Kafka Streams API.<br />Simple stream processing with Python. <br />Windowing and stateful processing.                                                               |
+| 7. Schema Registry and Serialization          | Why use Schema Registry?<br />Working with Avro and Protobuf. <br />Serializing and deserializing messages.                                                                          |
+| 8. Kafka Connect & Integration with Databases | Overview of Kafka Connect.<br />Connecting Kafka with databases (PostgreSQL, MySQL). <br />Using sink and source connectors.                                                         |
+| 9. Kafka Security & Monitoring                | Authentication and Authorization in Kafka.<br />Enabling SSL and SASL. <br />Monitoring Kafka with tools like Prometheus and Grafana.                                                |
+| 10. Kafka in Production                       | Best practices for deploying Kafka in production.<br />Tuning Kafka for high performance. <br />Handling failure and ensuring fault tolerance.                                       |
+| 11. Case Study & Hands-on Project             | Building a real-time data pipeline with Kafka, Python, and GCP.<br />Implementing a mini project integrating Kafka with Spark, Airflow, or Beam.                                     |
+
+.
