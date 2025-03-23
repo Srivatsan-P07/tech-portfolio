@@ -1,9 +1,11 @@
 **📘 Apache Beam with Python – Course Content**
----
+--------------------------------------------
+
 Learn how to build powerful data processing pipelines using Apache Beam with the Python SDK. This roadmap covers everything from basics to deploying production-grade streaming pipelines on the cloud.
 
 **📚 Course Modules**
----
+-----------------
+
 | **Module** | **Topic**                              | **Description**                                                    |
 | ---------------- | -------------------------------------------- | ------------------------------------------------------------------------ |
 | **1**      | **Introduction to Apache Beam**        | Overview of data processing, Beam’s unified model, batch vs stream      |
@@ -14,7 +16,7 @@ Learn how to build powerful data processing pipelines using Apache Beam with the
 | **6**      | **Windowing Basics**                   | Fixed, Sliding, and Session windows, windowing strategies                |
 | **7**      | **Triggers**                           | Default, AfterWatermark, AfterProcessingTime, AfterCount triggers        |
 | **8**      | **Handling Late Data**                 | Allowed lateness, accumulation modes (discarding/accumulating)           |
-| **9**      | **tateful Processing**                 | User state, timers in Beam Python SDK                                    |
+| **9**      | **Stateful Processing**                | User state, timers in Beam Python SDK                                    |
 | **10**     | **Working with External Data**         | Reading and writing to files (CSV, JSON), BigQuery, Pub/Sub, GCS         |
 | **11**     | **Error Handling**                     | Dead-letter queues, try/except in DoFns, retries                         |
 | **12**     | **Custom PTransforms and DoFns**       | Writing reusable transforms and DoFn classes with setup/teardown         |
@@ -26,13 +28,15 @@ Learn how to build powerful data processing pipelines using Apache Beam with the
 | **18**     | **Use Case Projects**                  | Building end-to-end batch and streaming pipeline projects                |
 
 **🚀 Prerequisites**
----
+----------------
+
 - Python 3.9.0
 - Basic understanding of data processing
 - Familiarity with GCP (optional but helpful)
 
 **🧠 Tips for Learning**
----
+--------------------
+
 - Start with simple batch jobs before jumping into streaming.
 - Use **`DirectRunner`** locally, and test often.
 - Always think in terms of transforms and PCollections.

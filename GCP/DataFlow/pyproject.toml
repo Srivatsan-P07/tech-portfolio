@@ -1,0 +1,17 @@
+[project]
+name = "dataflow_works"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Srivatsan-P07",email = "hawx.overkill@gmail.com"}
+]
+readme = "README.md"
+requires-python = "==3.9"
+dependencies = [
+    "apache-beam[gcp,dataframe] (==2.61.0)",
+    "poetry-plugin-export (==1.9.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

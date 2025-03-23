@@ -1,0 +1,9 @@
+CustomerID,TransactionID,TransactionAmount,ItemsPurchased
+C001,T001,1200,Apple-Banana-Chips
+C002,T002,450,Orange-Milk
+C003,T003,10500,Laptop-Apple
+C001,T004,3000,Bread-Jam-Butter
+C002,T005,50,Candy-Banana
+C004,T006,7000,Phone-Charger
+C003,T007,-500,Refund
+C001,T008,600,Apple-Banana-Banana
