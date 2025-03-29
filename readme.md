@@ -16,12 +16,12 @@ This repo serves as a structured collection of my hands-on experience and contin
 ## 📂 Repository Structure
 
 📂 Tech-Portfolio
-│── 📁 Apache-Airflow
-│── 📁 Apache-Beam
-│── 📁 Apache-Kafka
-│── 📁 Apache-Spark
-│── 📁 GCP
-        │─ 📁 BigQuery
-│── 📁 Python
-│── 📁 SQL
-│── README.md  *`You're here!`* 🚀
+- 📁 Apache-Airflow
+- 📁 Apache-Beam
+- 📁 Apache-Kafka
+- 📁 Apache-Spark
+- 📁 GCP
+  - 📁 BigQuery
+- 📁 Python
+- 📁 SQL
+- README.md  *`You're here!`* 🚀
