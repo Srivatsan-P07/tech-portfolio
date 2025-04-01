@@ -1,16 +1,25 @@
-# 🐍 **Python Internship Training Syllabus**
+# Python Beginners
 
-| Week | Topic Category                        | Topics Covered                                                                    | Activities / Assignments                       |
-| ---- | ------------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------- |
-| 1    | **Introduction to Python**      | Python history, installation, IDEs, syntax basics, variables, data types          | "Hello World", basic calculator                |
-|      | **Input/Output & Operators**    | `input()`,`print()`, arithmetic, logical, comparison operators                | Mini Quiz, Simple interest calculator          |
-| 2    | **Control Flow**                | `if`, `elif`, `else`, `while`, `for` loops, nested conditions                | Number guessing game                           |
-|      | **Data Structures - I**         | Lists, tuples, sets, dictionaries, methods, mutability                            | To-do list using list, dict-based phonebook    |
-| 3    | **Functions**                   | Defining, calling, arguments, return values, `*args`, `**kwargs`, recursion     | Fibonacci, factorial, menu-driven app          |
-|      | **Modules & Packages**          | Importing, built-in modules (`math`,`random`,`datetime`), creating packages | Dice simulator, random password generator      |
-| 4    | **File Handling**               | Reading/writing files, modes (`r`,`w`,`a`),`with`statement                | Log reader, data appender                      |
-|      | **Error Handling**              | Try-except blocks, common exceptions, custom exceptions                           | File not found handler, user input validation  |
-| 5    | **Object-Oriented Programming** | Classes, objects, constructors, inheritance, polymorphism                         | Bank account system, student management system |
-|      | **Advanced Data Structures**    | List comprehensions, dictionary comprehensions, lambda,`map`,`filter`,`zip` | Data transformer app                           |
-| 6    | **Introduction to Libraries**   | `pandas`, `matplotlib`, `requests`, `json` basics                             | Data visualization, API fetch and parse        |
-|      | **Mini Project / Capstone**     | Combine concepts into a real-world mini project                                   | e.g., Task tracker, Expense manager            |
+| **Module**  | **Topics Covered**  | **Description**  |
+|-------------|---------------------|------------------|
+| **Module 1: Introduction to Python** | What is Python?, Installing Python, Running Python Code | Introduction to Python and setting up the environment |
+| **Module 2: Basic Syntax & Data Types** | Variables, Data Types (int, float, str, bool), Type Casting | Understanding basic syntax and fundamental data types |
+| **Module 3: Operators & Expressions** | Arithmetic, Comparison, Logical, Assignment, Bitwise Operators | Learning how to perform operations in Python |
+| **Module 4: Control Flow Statements** | If-Else, Loops (for, while), Break & Continue | Writing decision-making and looping structures |
+| **Module 5: Functions & Modules** | Defining Functions, Arguments & Return Values, Importing Modules | Writing reusable code using functions and modules |
+| **Module 6: Data Structures** | Lists, Tuples, Sets, Dictionaries | Understanding and using built-in data structures |
+| **Module 7: File Handling** | Reading & Writing Files, Working with CSV Files | Handling external files efficiently |
+| **Module 8: Exception Handling** | Try-Except Blocks, Custom Exceptions | Managing errors and exceptions effectively |
+| **Module 9: Object-Oriented Programming (OOP)** | Classes & Objects, Inheritance, Polymorphism, Encapsulation | Understanding OOP concepts and implementing them in Python |
+| **Module 10: Web Scraping** | BeautifulSoup, Requests Library | Extracting data from websites |
+| **Module 11: Introduction to APIs & Automation** | Working with APIs, Automating Tasks using Python | Integrating APIs and automating repetitive tasks |
+
+---
+
+# Python Advanced
+
+| **Module**  | **Topics Covered**  | **Description**  |
+|-------------|---------------------|------------------|
+| **Module 12: Working with Libraries** | NumPy, Pandas, Matplotlib | Introduction to important libraries for data handling and visualization |
+| **Module 13: Database Connectivity** | SQLite, MySQL, CRUD Operations | Connecting Python with databases |
+| **Module 14: Introduction to GUI Development** | Tkinter, PyQt Basics | Creating simple desktop applications |
