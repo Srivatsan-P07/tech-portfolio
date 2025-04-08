@@ -24,3 +24,22 @@ An improvement on the Porter Stemmer, developed by Martin Porter himself.
 It is more flexible and can be used for multiple languages.
 Example: "running" becomes "run," "happiness" becomes "happi."
 """
+from nltk.stem import PorterStemmer, LancasterStemmer, SnowballStemmer
+
+porter = PorterStemmer()
+lancaster = LancasterStemmer()
+snowball = SnowballStemmer("english")
+
+words = ["running", "jumps", "easily", "swimming", "trouble"]
+
+print("Porter Stemmer")
+for word in words:
+    print(f" {word} --> {porter.stem(word)} ")
+
+print("Lancaster Stemmer")
+for word in words:
+    print(f" {word} --> {lancaster.stem(word)} ")
+
+print("Snowball Stemmer")
+for word in words:
+    print(f" {word} --> {snowball.stem(word)} ")
