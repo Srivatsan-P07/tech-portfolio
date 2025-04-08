@@ -1,1 +1,2 @@
+nltk.download('stopwords', download_dir='/your/custom/path')
 windows_location = C:\Users\Sriva\AppData\Roaming\nltk_data
