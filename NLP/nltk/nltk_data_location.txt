@@ -1,2 +1,6 @@
-nltk.download('stopwords', download_dir='/your/custom/path')
+# Code
+nltk.data.path.append(r'D:\tech-portfolio\temp_folder')
+nltk.download('wordnet', download_dir=r'D:\tech-portfolio\temp_folder')
+
+# Default Location 
 windows_location = C:\Users\Sriva\AppData\Roaming\nltk_data
