@@ -1,7 +1,7 @@
 # Apache-Spark
 
 | **Module** | **Topic** | **Description** |
-|------------|-------------------------------------------|
+|------------|-----------|-----------------|
 | 1 | **Introduction to Big Data & Spark** | Overview of Big Data, Hadoop ecosystem, and Spark's role in it |
 | 2 | **Spark Architecture** | Spark components (Driver, Executors, Cluster Manager), DAG, and lazy evaluation|
 | 3 | **Spark Installation & Setup** | Local setup, using Spark on Standalone/YARN/Mesos/Kubernetes |

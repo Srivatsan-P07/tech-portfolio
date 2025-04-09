@@ -1,7 +1,7 @@
 ### 📘 **Apache Spark on Google Cloud Dataproc - Course Content**
 
 | **Module** | **Topic** | **Description** |
-|------------|--------------------------------------------|
+|------------|-----------|-----------------|
 | 1 | Introduction to Dataproc | What is Dataproc, key features, advantages over traditional clusters |
 | 2 | Setting Up Google Cloud Environment | Creating a GCP account, enabling billing, setting up IAM roles & permissions |
 | 3 | Creating Dataproc Clusters | Using Console, gcloud CLI, Terraform basics (optional) |
