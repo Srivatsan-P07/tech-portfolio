@@ -1,0 +1,118 @@
+version: '3.8'
+
+services:
+  spark-master:
+    image: bitnami/spark:latest
+    container_name: spark-master
+    ports:
+      - "8080:8080"  # Spark Master Web UI
+      - "7077:7077"  # Spark Master Communication Port
+    environment:
+      - SPARK_MODE=master
+      #By setting SPARK_MODE to master, you are configuring this Spark instance to act as the master node. 
+      #The master node is responsible for managing the cluster, distributing tasks to worker nodes, and monitoring their status.
+      
+      - SPARK_MASTER_HOST=spark-master
+      #SPARK_MASTER_HOST is set to spark-master, which is the hostname that other nodes in the Spark cluster will 
+      #use to communicate with the master node. 
+      #This hostname should be resolvable within the Docker network or the environment where the Spark cluster is deployed.
+      
+      - SPARK_MASTER_PORT=7077
+      # By setting SPARK_MASTER_PORT to 7077, you specify the port on which the Spark Master will 
+      # listen for incoming connections from Spark worker nodes and clients. 
+      # This port is crucial for the internal communication within the Spark cluster.
+
+    volumes:
+      - ./spark-data:/opt/spark/work-dir  # Mount a local directory for Spark work
+    networks:
+      - spark-network
+
+  spark-worker-1:
+    image: bitnami/spark:latest
+    container_name: spark-worker-1
+    depends_on:
+      - spark-master
+      #Ensures that the spark-master container is started before spark-worker-1. 
+      #This dependency is crucial because the worker needs to connect to the master node.
+
+    ports:
+      - "8081:8081"  # Worker 1 Web UI
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      #Specifies the URL of the Spark Master node. 
+      #This URL includes the hostname (spark-master) and the port (7077) where the master node is listening. 
+      #The worker node uses this URL to register itself with the master node.
+
+    volumes:
+      - ./spark-data:/opt/spark/work-dir
+    networks:
+      - spark-network
+
+  spark-worker-2:
+    image: bitnami/spark:latest
+    container_name: spark-worker-2
+    depends_on:
+      - spark-master
+    ports:
+      - "8082:8082"  # Worker 2 Web UI
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+    volumes:
+      - ./spark-data:/opt/spark/work-dir
+    networks:
+      - spark-network
+
+  spark-worker-3:
+    image: bitnami/spark:latest
+    container_name: spark-worker-3
+    depends_on:
+      - spark-master
+    ports:
+      - "8083:8083"  # Worker 3 Web UI
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+    volumes:
+      - ./spark-data:/opt/spark/work-dir
+    networks:
+      - spark-network
+
+  spark-worker-4:
+    image: bitnami/spark:latest
+    container_name: spark-worker-4
+    depends_on:
+      - spark-master
+    ports:
+      - "8084:8084"  # Worker 4 Web UI
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+    volumes:
+      - ./spark-data:/opt/spark/work-dir
+    networks:
+      - spark-network
+
+  spark-worker-5:
+    image: bitnami/spark:latest
+    container_name: spark-worker-5
+    depends_on:
+      - spark-master
+    ports:
+      - "8085:8085"  # Worker 5 Web UI
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+    volumes:
+      - ./spark-data:/opt/spark/work-dir
+    networks:
+      - spark-network
+
+networks:
+  spark-network:
+    driver: bridge
+    #The bridge driver creates a private internal network on the Docker host. 
+    # Containers connected to this network can communicate with each other directly. 
+    # This is the default network driver in Docker and is suitable for applications 
+    # that need to communicate within a single Docker host.
