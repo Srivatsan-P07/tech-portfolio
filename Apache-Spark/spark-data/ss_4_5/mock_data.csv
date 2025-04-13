@@ -1,0 +1,11 @@
+name,age,salary,city
+Alice,30,100000.0,New York
+Bob,,85000.0,San Francisco
+Charlie,25,, 
+Diana,40,50000.0,New York
+Eve!,,, 
+,28,72000.0,chicago
+GRACE,35,91000.0,
+Henry,,67000.0,boston
+Ivy!,22,56000.0, 
+Jack$,27,81000.0,Miami
