@@ -1,6 +1,3 @@
-import os
-os.environ["_JAVA_OPTIONS"] = "--add-opens=java.base/java.security=ALL-UNNAMED"
-
 import logging
 from pyspark import SparkContext
 

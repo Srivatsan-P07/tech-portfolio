@@ -23,7 +23,7 @@ services:
       # This port is crucial for the internal communication within the Spark cluster.
 
     volumes:
-      - ./spark-data:/opt/spark/work-dir  # Mount a local directory for Spark work
+      - ./spark-data:/overkill/spark-data  # Mount a local directory for Spark work
     networks:
       - spark-network
 
@@ -45,7 +45,7 @@ services:
       #The worker node uses this URL to register itself with the master node.
 
     volumes:
-      - ./spark-data:/opt/spark/work-dir
+      - ./spark-data:/overkill/spark-data
     networks:
       - spark-network
 
@@ -60,7 +60,7 @@ services:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark-master:7077
     volumes:
-      - ./spark-data:/opt/spark/work-dir
+      - ./spark-data:/overkill/spark-data
     networks:
       - spark-network
 
@@ -75,7 +75,7 @@ services:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark-master:7077
     volumes:
-      - ./spark-data:/opt/spark/work-dir
+      - ./spark-data:/overkill/spark-data
     networks:
       - spark-network
 
@@ -90,7 +90,7 @@ services:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark-master:7077
     volumes:
-      - ./spark-data:/opt/spark/work-dir
+      - ./spark-data:/overkill/spark-data
     networks:
       - spark-network
 
@@ -105,7 +105,7 @@ services:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark-master:7077
     volumes:
-      - ./spark-data:/opt/spark/work-dir
+      - ./spark-data:/overkill/spark-data
     networks:
       - spark-network
 
