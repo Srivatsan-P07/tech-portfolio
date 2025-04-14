@@ -1,0 +1,10 @@
+{"employee_id":1,"first_name":"John","last_name":"Doe","department":"HR","salary":5000,"hire_date":"2020-01-15"}
+{"employee_id":2,"first_name":"Jane","last_name":"Smith","department":"Finance","salary":7000,"hire_date":"2018-03-20"}
+{"employee_id":3,"first_name":"Michael","last_name":"Jones","department":"IT","salary":8000,"hire_date":"2019-06-12"}
+{"employee_id":4,"first_name":"Emily","last_name":"Brown","department":"HR","salary":6700,"hire_date":"2021-02-25"}
+{"employee_id":5,"first_name":"David","last_name":"White","department":"Finance","salary":7500,"hire_date":"2017-07-30"}
+{"employee_id":6,"first_name":"Laura","last_name":"Green","department":"IT","salary":8500,"hire_date":"2020-09-10"}
+{"employee_id":7,"first_name":"Chris","last_name":"Black","department":"HR","salary":4500,"hire_date":"2021-08-05"}
+{"employee_id":8,"first_name":"Jessica","last_name":"Clark","department":"Finance","salary":7200,"hire_date":"2019-01-10"}
+{"employee_id":9,"first_name":"Kevin","last_name":"King","department":"IT","salary":8500,"hire_date":"2018-11-15"}
+{"employee_id":10,"first_name":"Olivia","last_name":"Young","department":"HR","salary":6700,"hire_date":"2017-12-03"}
