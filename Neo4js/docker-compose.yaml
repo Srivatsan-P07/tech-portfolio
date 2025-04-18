@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  neo4j:
+    image: neo4j:5.15
+    container_name: neo4j
+
+    ports:
+      - "7474:7474"  # Neo4j Browser (access via http://localhost:7474)
+      - "7687:7687"  # Bolt protocol (used by Neo4j drivers like Python, Java)
+
+    environment:
+      NEO4J_AUTH: neo4j/password123  # Sets the username and password for Neo4j
+
+    deploy:
+      resources:
+      # deploy.resources: These are Docker's own resource limits:
+        limits:
+        # limits = Hard cap (container cant go beyond this)
+          cpus: '2.0'     # Max CPU the container can use: 2 core
+          memory: 5G     # Max memory the container can use: 2GB
+        reservations:
+        # reservations = Minimum guaranteed to the container
+          cpus: '1.0'     # Guaranteed minimum CPU: 1 core
+          memory: 1G     # Guaranteed minimum memory: 1 GB
+
+    volumes:
+      - neo4j_data:/data  # Persists your Neo4j data (so it doesn't disappear when container stops)
+
+volumes:
+  # volumes: Keeps your data even if you restart the container. (why there are 2 volumes? Ask DevOps!)
+  neo4j_data:
