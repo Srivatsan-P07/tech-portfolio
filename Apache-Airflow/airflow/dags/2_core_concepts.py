@@ -26,17 +26,38 @@ def func():
     records = hook.get_records("SELECT * FROM users;")
     print(records)
 
+def xcom_push_fn(**kwargs):
+    ti = kwargs['ti']
+    ti.xcom_push(key = 'my_key2', value = True)
+
+def xcom_pull_fn(**kwargs):
+    ti = kwargs['ti']
+    output = ti.xcom_pull(task_ids = 'Xcom-Push', key = 'my_key2')
+    return output
+
 with DAG('2_core_concepts', start_date=datetime(2025, 4, 19), schedule_interval='@daily') as dag:
     task1 = DummyOperator(task_id='Dummy-Operator')
     
+    task2 = BashOperator(
+        task_id = 'Bash-Operator',
+        bash_command = f" echo 'Bash Command Variable --> {Variable.get('my_key1')}' "
+    )
+
     task3 = PythonOperator(
         task_id = 'Python-Operator',
         python_callable = func
     )
 
-    task2 = BashOperator(
-        task_id = 'Bash-Operator',
-        bash_command = f" echo 'Bash Command Variable --> {Variable.get('my_key1')}' "
+    task4 = PythonOperator(
+        task_id = 'Xcom-Push',
+        python_callable = xcom_push_fn,
+        provide_context = True
+    )
+
+    task5 = PythonOperator(
+        task_id = 'Xcom-Pull',
+        python_callable = xcom_pull_fn,
+        provide_context = True
     )
 
     # task4 = EmailOperator(
@@ -46,4 +67,4 @@ with DAG('2_core_concepts', start_date=datetime(2025, 4, 19), schedule_interval=
     #     html_content = 'Hello from AirFlow'
     # )
 
-    task1 >> task2 >> task3
+    task1 >> task2 >> task3 >> task4 >> task5

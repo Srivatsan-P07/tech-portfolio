@@ -232,7 +232,8 @@ print(value)  # Output: my_value
 from airflow.operators.python_operator import PythonOperator
 
 def push_xcom(**kwargs):
-    kwargs['ti'].xcom_push(key='my_key', value='Hello, XCom!')
+    ti = kwargs['ti'] # kwargs --> Key Word Arguments
+    ti.xcom_push(key='my_key', value='Hello, XCom!')
 
 push_task = PythonOperator(
     task_id='push_task',
@@ -246,8 +247,8 @@ push_task = PythonOperator(
 
 ```python
 def pull_xcom(**kwargs):
-value = kwargs['ti'].xcom_pull(task_ids='push_task', key='my_key')
-print(value)  # Output: Hello, XCom!
+    value = kwargs['ti'].xcom_pull(task_ids='push_task', key='my_key')
+    print(value)  # Output: Hello, XCom!
 
 pull_task = PythonOperator(
     task_id='pull_task',

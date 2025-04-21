@@ -15,12 +15,17 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
 
-  adminer:
-    image: adminer
-    container_name: adminer
-    restart: always
+  sqlpad:
+    image: sqlpad/sqlpad:latest
     ports:
-      - "8081:8080"
+      - "3000:3000"
+    environment:
+      - SQLPAD_ADMIN=admin
+      - SQLPAD_ADMIN_PASSWORD=yourpassword
+    volumes:
+      - sqlpad-data:/var/lib/sqlpad
+    restart: unless-stopped
 
 volumes:
   mysql_data:
+  sqlpad-data:
