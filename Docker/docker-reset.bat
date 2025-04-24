@@ -20,7 +20,7 @@ echo.
 
 :: Remove all images
 echo [3/6]  Removing all Docker images...
-for /f %%i in ('docker images -q') do docker rmi -f %%i >nul 2>&1
+::for /f %%i in ('docker images -q') do docker rmi -f %%i >nul 2>&1
 echo Done.
 echo.
 
