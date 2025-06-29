@@ -48,5 +48,5 @@ docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 
 Copy the password, paste it into the UI, and continue with setup (install plugins, create admin user, etc.)
 
-Jenkins UserName: Srivatsan_P
-Password: jenkins@pass
+Jenkins UserName: srivatsan
+Password: password
