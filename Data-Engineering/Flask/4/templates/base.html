@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}My Flask App{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <header>
+            <h1> Welcome to Jinja2 Demo</h1>
+            <nav>
+                <ul>
+                    <a href="{{ url_for('index') }}"> Home </a>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Jinja2 Template</p>
+        </footer>
+    </body>
+
+</html>
