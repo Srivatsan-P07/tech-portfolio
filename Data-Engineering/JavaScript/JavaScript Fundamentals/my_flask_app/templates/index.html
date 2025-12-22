@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> My Flask App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    </head>
+    <body>
+        <h1> Welcome, {{ user_name }}! </h1>
+        <div id="dashboard">
+            {% if is_premium_member %}
+                <p style="color:gold">Premium Member!</p>
+            {% else %}
+                <a href="/upgrade">Upgrade to Premium</a>
+            {% endif %}
+        </div>
+
+        <button onclick="checkBalance()"> Check Balance </button>
+
+        <script>
+            window.APP_DATA = {
+                username: "{{ user_name }}",
+                balance: {{ account_balance }},
+                notifications: {{ notifications | tojson }},
+                settings : {{ settings | tojson }}
+            };
+        </script>
+        <script src="{{ url_for('static', filename='script.js')}}"></script>
+    </body>
+</html>
