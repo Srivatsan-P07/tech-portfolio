@@ -1,0 +1,28 @@
+/* 1. Target the container */
+#container {
+  display: flex;           /* Enable Flexbox */
+  flex-direction: column;  /* Stack items vertically (h1 on top of button) */
+  align-items: center;     /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  
+  /* Give the container some height so centering is visible */
+  height: 100vh;           
+  gap: 20px;               /* Add space between the title and button */
+  font-family: sans-serif;
+}
+
+/* 2. Optional styling for the elements */
+
+.title {
+  margin: 0;
+  color: #333;
+}
+
+#changeTitleBtn {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
