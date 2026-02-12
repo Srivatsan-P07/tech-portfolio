@@ -2,6 +2,17 @@
 
 A quick reference for common `gcloud` commands related to configuration and authentication.
 
+## Add New Account
+*   **Command:** `gcloud auth login`
+*   **Explanation:** Authenticates your CLI with a new Google account.
+*   **Command:** `gcloud config configurations create <NAME>`
+*   **Explanation:** Creates a new named configuration profile to keep settings for different accounts separate.
+
+## See / Switch between Existing Account
+*   **List:** `gcloud config configurations list`
+*   **Switch:** `gcloud config configurations activate <NAME>`
+*   **Explanation:** Use these to see all your profiles and toggle between them (e.g., switching from a personal account to a work account).
+
 ---
 
 ### `gcloud config configurations list`
