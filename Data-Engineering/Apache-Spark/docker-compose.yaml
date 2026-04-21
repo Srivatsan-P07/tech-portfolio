@@ -58,6 +58,17 @@ services:
     networks:
       - spark-network
 
+  pyspark-notebook-local:
+    image: jupyter/pyspark-notebook:latest
+    container_name: pyspark-notebook-local
+    ports:
+      - "8889:8888"
+      - "4041:4040"  # <--- Add this line
+    #environment:
+      #- PYSPARK_SUBMIT_ARGS=--master spark://spark-master:7077 pyspark-shell
+    networks:
+      - spark-network
+
 networks:
   spark-network:
     driver: bridge
