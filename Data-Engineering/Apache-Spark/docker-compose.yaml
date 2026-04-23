@@ -63,9 +63,9 @@ services:
     container_name: pyspark-notebook-local
     ports:
       - "8889:8888"
-      - "4041:4040"  # <--- Add this line
-    #environment:
-      #- PYSPARK_SUBMIT_ARGS=--master spark://spark-master:7077 pyspark-shell
+      - "4041:4040"
+    volumes:
+      - ./work:/home/jovyan/work
     networks:
       - spark-network
 

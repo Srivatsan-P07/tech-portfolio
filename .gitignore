@@ -4,3 +4,4 @@ temp_folder
 logs
 .env
 serviceAccountKey.json
+.ipynb_checkpoints/
