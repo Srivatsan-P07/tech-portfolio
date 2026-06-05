@@ -9,9 +9,13 @@ services:
       - "8080:8080"
       - "7077:7077"
     environment:
-      - SPARK_MODE=master
+      - SPARK_PUBLIC_DNS=localhost
     command: >
-      /usr/local/spark/bin/spark-class org.apache.spark.deploy.master.Master
+      /usr/local/spark/bin/spark-class
+      org.apache.spark.deploy.master.Master
+      --host spark-master
+      --port 7077
+      --webui-port 8080
     networks:
       - spark-network
 
@@ -21,13 +25,15 @@ services:
     user: root
     depends_on:
       - spark-master
-    environment:
-      - SPARK_MODE=worker
-      - SPARK_MASTER_URL=spark://spark-master:7077
-    command: >
-      /usr/local/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
     ports:
       - "8081:8081"
+    environment:
+      - SPARK_PUBLIC_DNS=localhost
+    command: >
+      /usr/local/spark/bin/spark-class
+      org.apache.spark.deploy.worker.Worker
+      --webui-port 8081
+      spark://spark-master:7077
     networks:
       - spark-network
 
@@ -37,13 +43,15 @@ services:
     user: root
     depends_on:
       - spark-master
-    environment:
-      - SPARK_MODE=worker
-      - SPARK_MASTER_URL=spark://spark-master:7077
-    command: >
-      /usr/local/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
     ports:
-      - "8082:8081"
+      - "8082:8082"
+    environment:
+      - SPARK_PUBLIC_DNS=localhost
+    command: >
+      /usr/local/spark/bin/spark-class
+      org.apache.spark.deploy.worker.Worker
+      --webui-port 8082
+      spark://spark-master:7077
     networks:
       - spark-network
 
@@ -52,9 +60,12 @@ services:
     container_name: pyspark-notebook
     ports:
       - "8888:8888"
-      - "4040:4040"  # <--- Add this line
+      - "4040:4040"
+      - "4041:4041"
+      - "4042:4042"
     environment:
-      - PYSPARK_SUBMIT_ARGS=--master spark://spark-master:7077 pyspark-shell
+      - SPARK_PUBLIC_DNS=localhost
+      - PYSPARK_SUBMIT_ARGS=--master spark://spark-master:7077 --conf spark.ui.port=4040 --conf spark.ui.bindAddress=0.0.0.0 --conf spark.driver.host=pyspark-notebook pyspark-shell
     volumes:
       - ./work:/home/jovyan/work
     networks:
@@ -65,7 +76,7 @@ services:
     container_name: pyspark-notebook-local
     ports:
       - "8889:8888"
-      - "4041:4040"
+      - "4043:4040"
     volumes:
       - ./work:/home/jovyan/work
     command: >
