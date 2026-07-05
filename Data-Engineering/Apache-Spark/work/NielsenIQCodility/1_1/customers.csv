@@ -1,0 +1,6 @@
+customer_id,customer_name,is_active
+101,Alice,1
+102,Bob,1
+103,Carol,0
+104,David,1
+105,Eve,1

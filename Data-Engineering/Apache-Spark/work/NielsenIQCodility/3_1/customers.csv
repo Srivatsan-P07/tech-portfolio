@@ -1,0 +1,6 @@
+cust_id,name,signup_date,status
+1,Alice,2023-01-01,ACTIVE
+2,Bob,2023-02-15,INACTIVE
+3,Charlie,null,ACTIVE
+1,Alice,2023-01-01,ACTIVE
+4,Dave,2023-03-01,aCtIvE

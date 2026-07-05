@@ -1,0 +1,3 @@
+customer_id,sales_date,txn_count,gross_sales,discount_amount,etl_updated_at
+101,2025-02-01,1,30,0,2025-02-01 23:59:00
+200,2025-02-01,1,30,0,2025-02-01 23:59:00
