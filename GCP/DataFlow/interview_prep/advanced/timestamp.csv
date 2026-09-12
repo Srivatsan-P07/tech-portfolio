@@ -1,0 +1,4 @@
+sensor_id,temperature,event_time
+sensor_1,25.4,1714300000
+sensor_2,26.1,1714300060
+sensor_3,24.8,1714300120
