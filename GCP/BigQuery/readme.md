@@ -33,6 +33,8 @@
 |                                  | BigQuery GIS                           | Geospatial SQL analytics.                                      | Map geodata in Geo Viz               |
 |                                  | BigLake & Open Table Formats           | Work with Iceberg, Parquet, Delta Lake.                        | Query GCS with BQ syntax             |
 |                                  | Remote Functions                       | Extend SQL with API calls.                                     | Integrate with Cloud Functions       |
+|                                  | Vector Search & AI Integration          | Query embeddings, LLM integrations.                             | Use Vertex AI with BigQuery          |
+|                                  | BigQuery Spark & Apache Spark Runtime   | Run PySpark & Scala on BigQuery data.                          | Transition from Dataproc             |
 | **8. Integration & Ingestion**   | Batch Loads, Streaming Inserts         | Compare load methods and costs.                                | Use bq CLI and Pub/Sub               |
 |                                  | Federated Queries                      | Query data in Cloud SQL, GCS, Sheets.                          | Build cross-source queries           |
 |                                  | Data Transfer Service                  | Automate SaaS source ingestion.                                | GA → BigQuery integration            |
