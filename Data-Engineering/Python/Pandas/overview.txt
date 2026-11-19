@@ -1,0 +1,75 @@
+pd.Dataframe(dict with list)
+pd.read_csv("file.csv", chunksize=50000) / df.to_csv('file.csv')
+pd.read_excel('file.xlsx') / df.to_excel('file.xlsx')
+pd.read_sql()
+
+# Describe
+df.head(3)                        # First 3 rows
+df.tail(2)                        # Last 2 rows
+df.shape                          # (7, 6) -> 7 rows, 6 columns
+df.columns                        # Index(['Employee_ID', 'Name', ...])
+df.info()                         # Data types + spots the 2 missing values (NaN)
+df.describe()                     # Mean, min, max for Age & Salary
+df['Department'].unique()         # array(['IT', 'HR', 'Sales'])
+df['Department'].nunique()        # 3
+df['City'].value_counts()         # Chennai: 3, Mumbai: 2, Bengaluru: 1, Delhi: 1
+
+# Selection
+loc[] --> df.loc[0:2, ['Name', 'Salary']]
+iloc[] --> df.iloc[0:2, 1:4]
+
+# Filtering
+df[df['Salary'] > 70000]
+df.query("Department == 'IT' and Age < 30")
+
+# Range & Membership
+df[df['City'].isin(['Chennai', 'Mumbai'])]
+df[df['Age'].between(25, 35)]
+
+# Nulls
+df.isna()
+df.fillna()
+df.dropna()
+
+# Duplicates
+df.duplicated()
+df.drop_duplicates()
+
+# Fixes
+df['col'].replace( {'old_val' : 'new_val'} )
+df['col'].map( {'old_val1': 'new_val1', 'old_val2' : 'new_val2'} )
+df['col'].astype(str)
+
+# custom logic
+df['col'].apply(func)
+df['col'].apply(lambda x: x*x)
+
+# Add / Remove / Rename columns
+df['new_col'].assign(Bonus= df['col']*2)
+df.drop(columns={'col1', 'col2'})
+df.drop([0,1,2]) # remove these rows
+df.rename(columns={'old_col': 'new_col'})
+
+# sorting
+df.sort_index() # Sort based on row index
+df.sort_values(by='Salary', ascending=False)
+
+# String Methods
+df['col'].str.upper()
+
+
+# GroupBy & Agg & Filter
+df.groupby('col1')['col2'].mean() --> We have mean(), max(), min(), sum(), count() these are all `agg`
+df.groupby('col1').agg(
+    {'col1': ['agg1', 'agg2'], 'col2': 'agg3'}
+)
+df['new_col'] = df.groupby('col1')['col2'].transform('agg')
+df.groupby('col')['col2'].mean().filter(lambda x: x%2 == 0)
+
+# Joins
+pd.merge(df1, df2, on='Employee_ID', how='left')
+pd.merge(df1, df2, left_on='Employee_ID', right_on='user_id', how='left').
+
+pd.concat([df1, df2], axis=0) --> Union of rows
+pd.concat([df1, df2], axis=1) --> Adding more columns
+df1.join(df2) --> Join on index
